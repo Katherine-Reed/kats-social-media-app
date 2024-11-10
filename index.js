@@ -10,7 +10,7 @@ chatBtn.addEventListener('click', function() {
 function getConversationHtml(){
     let conversationHtml = ''
 
-    for (let chat of chatsData){
+    chatsData.forEach(function(chat){
         conversationHtml = `
         <article class="chat">
             <section class="chat-inner">
@@ -33,7 +33,7 @@ function getConversationHtml(){
             </section>
         </article>
         `
-    }
+    })
     return conversationHtml
 }
 
