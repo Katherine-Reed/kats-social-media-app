@@ -1,4 +1,4 @@
-import { chatsData } from "./data";
+import { chatsData } from "./data.js";
 
 const chatInput = document.getElementById('chat-input')
 const chatBtn = document.getElementById('chat-btn')
@@ -11,7 +11,7 @@ function getConversationHtml(){
     let conversationHtml = ''
 
     chatsData.forEach(function(chat){
-        conversationHtml = `
+        conversationHtml += `
         <article class="chat">
             <section class="chat-inner">
                 <img src="${chat.profilePic}" class="profile-pic">
