@@ -20,15 +20,16 @@ function getConversationHtml(){
                     <p class="chat-text">${chat.chatText}</p>
                     </section>
                     <section class="chat-details">
-                    <span class="chat-detail">
-                        ${chat.replies.length}
-                    </span>
-                    <span class="chat-detail">
-                        ${chat.likes}
-                    </span>
-                    <span class="chat-detail">
-                        ${chat.shares}
-                    </span>
+                        <span class="chat-detail">
+                            ${chat.replies.length}
+                        </span>
+                        <span class="chat-detail">
+                            ${chat.likes}
+                        </span>
+                        <span class="chat-detail">
+                            ${chat.shares}
+                        </span>
+                    </section>
                 </section>
             </section>
         </article>
