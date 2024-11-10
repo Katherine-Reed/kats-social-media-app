@@ -17,6 +17,10 @@ i{
     font-size: 15px;
 }
 
+.fa-solid{
+    color: #999;
+}
+
 .liked{
     color: purple;
 }
@@ -90,7 +94,7 @@ button{
     width: 160px;
 }
 
-.chat-detail{
+.detail{
     display: flex;
     gap: 4px;
 }

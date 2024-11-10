@@ -12,28 +12,30 @@ function getConversationHtml(){
 
     chatsData.forEach(function(chat){
         conversationHtml += `
-        <article class="chat">
-            <section class="chat-inner">
-                <img src="${chat.profilePic}" class="profile-pic">
-                <section>
-                    <p class="handle">${chat.handle}</p>
-                    <p class="chat-text">${chat.chatText}</p>
-                    </section>
-                    <section class="chat-details">
-                        <span class="chat-detail">
-                            ${chat.replies.length}
-                        </span>
-                        <span class="chat-detail">
-                            ${chat.likes}
-                        </span>
-                        <span class="chat-detail">
-                            ${chat.shares}
-                        </span>
-                    </section>
-                </section>
+<article class="chat">
+    <section class="chat-inner">
+        <img src="${chat.profilePic}" class="profile-pic">
+        <section>
+            <p class="handle">${chat.handle}</p>
+            <p class="chat-text">${chat.chatText}</p>
+            <section class="chat-details">
+                <span class="detail">
+                    <i class="fa-regular fa-comment-dots"></i>
+                    ${chat.replies.length}
+                </span>
+                <span class="detail">
+                    <i class="fa-solid fa-heart"></i>
+                    ${chat.likes}
+                </span>
+                <span class="detail">
+                    <i class="fa-solid fa-retweet"></i>
+                    ${chat.shares}
+                </span>
             </section>
-        </article>
-        `
+        </section>
+    </section>
+</article>
+`
     })
     return conversationHtml
 }
