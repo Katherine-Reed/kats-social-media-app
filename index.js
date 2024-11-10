@@ -44,6 +44,15 @@ function getConversationHtml(){
     let conversationHtml = ''
 
     chatsData.forEach(function(chat){
+        let likeIconClass = ''
+        let repostIconClass = ''
+        if(chat.isLiked){
+            likeIconClass = 'liked'
+        }
+        if(chat.isReposted){
+            repostIconClass = 'reposted'
+        }
+
         conversationHtml += `
             <article class="chat">
                 <section class="chat-inner">
@@ -62,14 +71,14 @@ function getConversationHtml(){
                             <span class="detail">
                                 <i
                                 data-like="${chat.uuid}"
-                                class="fa-solid fa-heart"
+                                class="fa-solid fa-heart ${likeIconClass}"
                                 ></i>
                                 ${chat.likes}
                             </span>
                             <span class="detail">
                                 <i
                                     data-repost="${chat.uuid}"
-                                    class="fa-solid fa-retweet"
+                                    class="fa-solid fa-retweet ${repostIconClass}"
                                 ></i>
                                 ${chat.reposts}
                             </span>
