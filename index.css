@@ -21,7 +21,7 @@ i{
     color: purple;
 }
 
-.retweeted {
+.rechated {
     color: green;
 }
 
@@ -36,7 +36,7 @@ header{
     padding-bottom: 25px;
 }
 
-.tweet-input-area {
+.chat-input-area {
     align-items: flex-start;
     display: flex;
     gap: 10px;
@@ -67,34 +67,34 @@ button{
     width: 100%; 
 }
 
-/* tweet */
+/* chat */
 
-.tweet{
+.chat{
     border-top: 1px solid lightgray;
     padding: 20px 0 0 0;
     margin: 15px 0;
     width: 100%;
 }
 
-.tweet-inner{
+.chat-inner{
     align-items: flex-start;
     display: flex;
     gap: 10px;
 }
 
-.tweet-details{
+.chat-details{
     display: flex;
     font-size: 13px;
     justify-content: space-between;
     width: 160px;
 }
 
-.tweet-detail{
+.chat-detail{
     display: flex;
     gap: 4px;
 }
 
-.tweet-reply{
+.chat-reply{
     border-top: 1px solid lightgray;
     padding: 20px 0 0 0px;
     margin: 10px 0 10px 40px;
@@ -108,7 +108,7 @@ button{
     margin-top: 0;
 }
 
-.tweet-text{
+.chat-text{
     font-size: 14px;
     line-height: 20px;
     width: 207px;

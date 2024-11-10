@@ -1,8 +1,8 @@
-import { tweetsData } from "./data";
+import { chatsData } from "./data";
 
-const tweetInput = document.getElementById('tweet-input')
-const tweetBtn = document.getElementById('tweet-btn')
+const chatInput = document.getElementById('chat-input')
+const chatBtn = document.getElementById('chat-btn')
 
-tweetBtn.addEventListener('click', function() {
-    console.log(tweetInput)
+chatBtn.addEventListener('click', function() {
+    console.log(chatInput)
 })
