@@ -7,6 +7,9 @@ document.addEventListener('click', function(e) {
     if(e.target.dataset.like){
         handleLikeClick(e.target.dataset.like)
     }
+    else if(e.target.dataset.repost){
+        handleRepostClick(e.target.dataset.repost)
+    }
 })
 
 function handleLikeClick(chatId) {
@@ -19,6 +22,21 @@ function handleLikeClick(chatId) {
         targetChatObj.likes++
     }
     targetChatObj.isLiked = !targetChatObj.isLiked
+    render()
+}
+
+function handleRepostClick(chatId){
+    const targetChatObj = chatsData.filter(function(chat){
+        return chat.uuid === chatId
+    })[0]
+
+    if(targetChatObj.isReposted){
+        targetChatObj.reposts--
+    }
+    else{
+        targetChatObj.reposts++
+    }
+    targetChatObj.isReposted = !targetChatObj.isReposted
     render()
 }
 
@@ -50,10 +68,10 @@ function getConversationHtml(){
                             </span>
                             <span class="detail">
                                 <i
-                                    data-share="${chat.uuid}"
+                                    data-repost="${chat.uuid}"
                                     class="fa-solid fa-retweet"
                                 ></i>
-                                ${chat.shares}
+                                ${chat.reposts}
                             </span>
                         </section>
                     </section>

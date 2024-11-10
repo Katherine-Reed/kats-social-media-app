@@ -3,19 +3,19 @@ export const chatsData = [
         handle: "@TrollBot66756542 💎",
         profilePic: "images/troll.png",
         likes: 27,
-        shares: 10,
+        reposts: 10,
         chatText: `Buy Bitcoin, ETH Make 💰💰💰 low low prices. 
             Guaranteed return on investment. HMU DMs open!!`,
         replies: [],
         isLiked: false,
-        isShared: false,
+        isReposted: false,
         uuid: "4b161eee-c0f5-4545-9c4b-8562944223ee",
     },    
     {
         handle: "@Teflon ✅",
         profilePic: "images/mask.png",
         likes: 6500,
-        shares: 234,
+        reposts: 234,
         chatText: "I need volunteers for a one-way mission to Mars 🪐. No experience necessary🚀",
         replies: [
                   {
@@ -30,14 +30,14 @@ export const chatsData = [
             },
         ],
         isLiked: false,
-        isShared: false,
+        isReposted: false,
         uuid: "3c23454ee-c0f5-9g9g-9c4b-77835tgs2",
     },
         {
         handle: "@NoobCoder12",
         profilePic: "images/overflow.png",
         likes: 10,
-        shares: 3,
+        reposts: 3,
         chatText: "Are you a coder if you only know HTML?",
         replies: [
             {
@@ -52,7 +52,7 @@ export const chatsData = [
             },
         ],
         isLiked: false,
-        isShared: false,
+        isReposted: false,
         uuid: "8hy671sff-c0f5-4545-9c4b-1237gyys45",
     },     
 ]
