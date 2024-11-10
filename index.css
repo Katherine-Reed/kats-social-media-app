@@ -7,7 +7,7 @@ html, body {
 /* typography and icons */
 
 h1{
-    color: #0F8CDF;
+    color: rebeccapurple;
     font-size: 20px;
     margin-bottom: 10px;
 }
@@ -18,11 +18,11 @@ i{
 }
 
 .liked{
-    color: red;
+    color: purple;
 }
 
 .retweeted {
-    color: limegreen;
+    color: green;
 }
 
 /* layout */
@@ -56,7 +56,7 @@ textarea{
 }
 
 button{
-    background-color: #1DA1F2;
+    background-color: rebeccapurple;
     border: none;
     border-radius: 20px;
     color: white;
