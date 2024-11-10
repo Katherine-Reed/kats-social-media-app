@@ -37,4 +37,8 @@ function getConversationHtml(){
     return conversationHtml
 }
 
-getConversationHtml()
+function render(){
+    document.getElementById('conversation').innerHTML = getConversationHtml()
+}
+
+render()
