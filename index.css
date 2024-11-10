@@ -1,20 +1,20 @@
 html, body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
 }
 
 /* typography and icons */
 
 h1{
     color: #0F8CDF;
-    margin-bottom: 10px;
     font-size: 20px;
+    margin-bottom: 10px;
 }
 
 i{
-    font-size: 15px;
     cursor: pointer;
+    font-size: 15px;
 }
 
 .liked{
@@ -22,14 +22,14 @@ i{
 }
 
 .retweeted {
-  color: limegreen;
+    color: limegreen;
 }
 
 /* layout */
 
 main, header{
-    width: 290px;
     margin: 0 auto;
+    width: 290px;
 }
 
 header{
@@ -37,8 +37,8 @@ header{
 }
 
 .tweet-input-area {
-    display: flex;
     align-items: flex-start;
+    display: flex;
     gap: 10px;
 }
 
@@ -46,24 +46,25 @@ header{
 
 textarea{
     border: none;
-    padding: 10px;
-    margin: 0 0 20px 0;
-    height: 60px;
-    width: 100%;
     font-size: 20px;
+    height: 60px;
     line-height: 30px;
+    margin: 0 0 20px 0;
+    padding: 10px;
+    resize: none;
+    width: 100%;
 }
 
 button{
     background-color: #1DA1F2;
     border: none;
-    color: white;
-    padding: 10px 19px;
     border-radius: 20px;
-    width: 100%; 
+    color: white;
     cursor: pointer;
     font-size: 20px;
     font-weight: 600;
+    padding: 10px 19px;
+    width: 100%; 
 }
 
 /* tweet */
@@ -71,13 +72,13 @@ button{
 .tweet{
     border-top: 1px solid lightgray;
     padding: 20px 0 0 0;
-    width: 100%;
     margin: 15px 0;
+    width: 100%;
 }
 
 .tweet-inner{
-    display: flex;
     align-items: flex-start;
+    display: flex;
     gap: 10px;
 }
 
@@ -101,16 +102,16 @@ button{
 }
 
 .handle{
+    color: #555;
     font-size: 12px;
     font-weight: 500;
-    color: #555;
     margin-top: 0;
 }
 
 .tweet-text{
-    width: 207px;
     font-size: 14px;
     line-height: 20px;
+    width: 207px;
 }
 
 /* images */
