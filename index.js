@@ -1,7 +1,7 @@
 import { chatsData } from "./data.js";
+import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
 
 const chatInput = document.getElementById('chat-input')
-const chatBtn = document.getElementById('chat-btn')
 
 document.addEventListener('click', function(e) {
     if(e.target.dataset.like){
@@ -9,6 +9,12 @@ document.addEventListener('click', function(e) {
     }
     else if(e.target.dataset.repost){
         handleRepostClick(e.target.dataset.repost)
+    }
+    else if(e.target.dataset.reply){
+        handleReplyClick(e.target.dataset.reply)
+    }
+    else if(e.target.id === 'post-btn'){
+        handlePostBtnClick()
     }
 })
 
@@ -38,6 +44,24 @@ function handleRepostClick(chatId){
     }
     targetChatObj.isReposted = !targetChatObj.isReposted
     render()
+}
+
+function handleReplyClick(replyId){
+    document.getElementById(`replies-${replyId}`).classList.toggle('hidden')
+}
+
+function handlePostBtnClick(){
+    console.log({
+        handle: "@KatGrace",
+        profilePic: "images/avatar.png",
+        likes: 0,
+        reposts: 0,
+        chatText: chatInput.value,
+        replies: [],
+        isLiked: false,
+        isReposted: false,
+        uuid: uuidv4(),
+    })
 }
 
 function getConversationHtml(){
@@ -106,7 +130,7 @@ function getConversationHtml(){
                         </section>
                     </section>
                 </section>
-                <section id="replies-${chat.uuid}">
+                <section id="replies-${chat.uuid}" class="hidden">
                     ${repliesHtml}
                 </section>
             </article>
