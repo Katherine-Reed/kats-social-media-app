@@ -1,8 +1,6 @@
 import { chatsData } from "./data.js";
 import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
 
-const chatInput = document.getElementById('chat-input')
-
 document.addEventListener('click', function(e) {
     if(e.target.dataset.like){
         handleLikeClick(e.target.dataset.like)
@@ -51,18 +49,23 @@ function handleReplyClick(replyId){
 }
 
 function handlePostBtnClick(){
-    chatsData.unshift({
-        handle: "@KatGrace",
-        profilePic: "images/avatar.png",
-        likes: 0,
-        reposts: 0,
-        chatText: chatInput.value,
-        replies: [],
-        isLiked: false,
-        isReposted: false,
-        uuid: uuidv4(),
-    })
+    const chatInput = document.getElementById('chat-input')
+    
+    if(chatInput.value){
+        chatsData.unshift({
+            handle: "@KatGrace",
+            profilePic: "images/avatar.png",
+            likes: 0,
+            reposts: 0,
+            chatText: chatInput.value,
+            replies: [],
+            isLiked: false,
+            isReposted: false,
+            uuid: uuidv4(),
+        })
     render()
+    chatInput.value = ''
+    }
 }
 
 function getConversationHtml(){
