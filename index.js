@@ -51,7 +51,7 @@ function handleReplyClick(replyId){
 }
 
 function handlePostBtnClick(){
-    console.log({
+    chatsData.unshift({
         handle: "@KatGrace",
         profilePic: "images/avatar.png",
         likes: 0,
@@ -62,6 +62,7 @@ function handlePostBtnClick(){
         isReposted: false,
         uuid: uuidv4(),
     })
+    render()
 }
 
 function getConversationHtml(){
