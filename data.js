@@ -43,7 +43,7 @@ export const chatsData = [
             {
                 handle: "@StackOverflower ☣️",
                 profilePic: "images/hackerskillz.png",
-                chatText: "No. Onviosuly not. Go get a job in McDonald's.",
+                chatText: "No. Obviosuly not. Go get a job in McDonald's.",
             },
             {
                 handle: "@YummyCoder64",

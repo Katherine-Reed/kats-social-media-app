@@ -45,12 +45,33 @@ function getConversationHtml(){
 
     chatsData.forEach(function(chat){
         let likeIconClass = ''
-        let repostIconClass = ''
+        
         if(chat.isLiked){
             likeIconClass = 'liked'
         }
+
+        let repostIconClass = ''
+        
         if(chat.isReposted){
             repostIconClass = 'reposted'
+        }
+        
+        let repliesHtml = ''
+
+        if(chat.replies.length > 0){
+            chat.replies.forEach(function(reply){
+                repliesHtml+=`
+<section class="chat-reply">
+    <section class="chat-inner">
+        <img src="${reply.profilePic}" class="profile-pic">
+        <section>
+            <p class="handle">${reply.handle}</p>
+            <p class="chat-text">${reply.chatText}</p>
+        </section>
+    </section>
+</section>
+`
+            })
         }
 
         conversationHtml += `
@@ -84,6 +105,9 @@ function getConversationHtml(){
                             </span>
                         </section>
                     </section>
+                </section>
+                <section id="replies-${chat.uuid}">
+                    ${repliesHtml}
                 </section>
             </article>
         `
